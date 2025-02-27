@@ -32,7 +32,6 @@ function Page1() {
         setMyNoteDetails({ ...NotesDetails, note: e.target.value })
     }
     const handleMobileview = () => {
-        console.log("HandleView")
         const element = document.getElementById('leftnotediv')
         const element2 = document.getElementById('rightnotediv')
         if (window.innerWidth <= 480) {
@@ -41,16 +40,14 @@ function Page1() {
         }
     }
     const handleMobileviewclose = () => {
-        console.log("Function Handle Mobile View Close")
         const element = document.getElementById('leftnotediv')
         const element2 = document.getElementById('rightnotediv')
-        if (element.style.display==='none') {
+        if (window.innerWidth <= 480) {
             element.style.display = 'block'
             element2.style.display = 'none'
         }
     }
     const handleopenNotes = (value) => {
-        console.log("Function open notes")
         const [firstName, lastName] = value.name.split(" ");
         const firstCharFirstName = firstName ? firstName[0] : "";
         const firstCharLastName = lastName ? lastName[0] : '';
@@ -98,18 +95,25 @@ function Page1() {
         }
         setMyNoteDetails({ note: '', notedate: '', notetime: "" })
     }
-    // const [width, setWidth] = useState(window.innerWidth);
-    // const widthRef = useRef(window.innerWidth);
-    // useEffect(() => {
-    //     const handleResize = () => {
-    //         if (widthRef.current !== window.innerWidth) {
-    //             setWidth(window.innerWidth);
-    //             widthRef.current = window.innerWidth;
-    //         }
-    //     };
-    //     window.addEventListener("resize", handleResize);
-    //     return () => window.removeEventListener("resize", handleResize);
-    // }, []);
+    const [width, setWidth] = useState(window.innerWidth);
+    const widthRef = useRef(window.innerWidth);
+    useEffect(() => {
+        const handleResize = () => {
+            if (widthRef.current !== window.innerWidth) {
+                setWidth(window.innerWidth);
+                widthRef.current = window.innerWidth;
+            }
+        };
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
+    useEffect(()=>{
+        if(width<=480){
+            console.log("Enter")
+        }else{
+            console.log("Exit")
+        }
+    },[width])
     return (
         <>
             <div className='firstdiv'>

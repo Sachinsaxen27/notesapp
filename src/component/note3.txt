@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef, useState } from 'react'
 import './style.css'
 import image1 from './image/nonotes.png'
@@ -6,6 +5,7 @@ import sendbutton from './image/sendbutton.png'
 import arrowbutton from './image/arrow.png'
 import CreateNoteForm from './CreateNoteForm'
 function Page1() {
+    const notedListRef = useRef(null);
     document.addEventListener('keydown', (event) => { if (event.key === 'Enter') { handleupdatetime() } })
     const [NotesDetails, setMyNoteDetails] = useState({ note: '', notedate: '', notetime: "" })
     const [Showform, setMyShowForm] = useState(false)
@@ -32,7 +32,6 @@ function Page1() {
         setMyNoteDetails({ ...NotesDetails, note: e.target.value })
     }
     const handleMobileview = () => {
-        console.log("HandleView")
         const element = document.getElementById('leftnotediv')
         const element2 = document.getElementById('rightnotediv')
         if (window.innerWidth <= 480) {
@@ -41,16 +40,14 @@ function Page1() {
         }
     }
     const handleMobileviewclose = () => {
-        console.log("Function Handle Mobile View Close")
         const element = document.getElementById('leftnotediv')
         const element2 = document.getElementById('rightnotediv')
-        if (element.style.display==='none') {
+        if (window.innerWidth <= 480) {
             element.style.display = 'block'
             element2.style.display = 'none'
         }
     }
     const handleopenNotes = (value) => {
-        console.log("Function open notes")
         const [firstName, lastName] = value.name.split(" ");
         const firstCharFirstName = firstName ? firstName[0] : "";
         const firstCharLastName = lastName ? lastName[0] : '';
@@ -98,22 +95,39 @@ function Page1() {
         }
         setMyNoteDetails({ note: '', notedate: '', notetime: "" })
     }
-    // const [width, setWidth] = useState(window.innerWidth);
-    // const widthRef = useRef(window.innerWidth);
-    // useEffect(() => {
-    //     const handleResize = () => {
-    //         if (widthRef.current !== window.innerWidth) {
-    //             setWidth(window.innerWidth);
-    //             widthRef.current = window.innerWidth;
-    //         }
-    //     };
-    //     window.addEventListener("resize", handleResize);
-    //     return () => window.removeEventListener("resize", handleResize);
-    // }, []);
+    const handleSze = (value) => {
+        const notesMessage = document.getElementById('rightnotediv')
+        if (value > 780) {
+            notedListRef.current.style.display = 'block'
+            notesMessage.style.display = 'block'
+        } else if (value <= 780 && OpenNotes != undefined) {
+            notedListRef.current.style.display = 'none'
+            notesMessage.style.display = 'block'
+        } else {
+            notedListRef.current.style.display = 'block'
+            notesMessage.style.display = 'none'
+        }
+    }
+    useEffect(()=>{
+        let timer = undefined;
+        const handlewidth=()=>{
+             if(timer == undefined){
+                timer = setTimeout(()=>{
+                    handleSze(window.innerWidth);
+                    timer = undefined;
+                }, 50);
+             }else{
+                clearTimeout();
+             }
+            }
+ 
+        window.addEventListener('resize',handlewidth)
+        return ()=> window.removeEventListener('resize',handlewidth)
+    },[])
     return (
         <>
             <div className='firstdiv'>
-                <div className='notedivoption' id='leftnotediv'>
+                <div className='notedivoption' id='leftnotediv' ref={notedListRef}>
                     <div className='divheading'>
                         <h1 className='pocektnoteheading' >Pocket Note</h1>
                     </div>
@@ -147,7 +161,7 @@ function Page1() {
                         <div className='noteareadiv'>
                             <div className='notenavbar'>
                                 <div>
-                                    <img src={arrowbutton} alt="<---" className='arrowimage' onClick={handleMobileviewclose} />
+                                    <img src={arrowbutton} alt="<---" className='arrowimage' onClick={handleMobileviewclose}/>
                                 </div>
                                 <div className='divchoicecircle' style={{ backgroundColor: `${OpenNotes.color}`, border: "none" }}>{OpenNotes.iconname}</div>
                                 <div style={{ fontSize: '20px' }}>
