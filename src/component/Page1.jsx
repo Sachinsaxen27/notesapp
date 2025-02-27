@@ -160,40 +160,11 @@ function Page1() {
                                 }
                             </div>
                         ))}
-                        <div>
+                        <div style={{position:'relative'}}>
                             <textarea name="note" id="inputnotes" cols={130} rows={7} value={NotesDetails.note} onChange={handlechange} placeholder='Here’s the sample text for sample work' className='notetextarea'></textarea>
                         </div>
                         <img src={sendbutton} alt="send button" className='imagebutton' onClick={handleupdatetime} />
                     </div>
-                        // <div className='noteareadiv'>
-                        //     <div className='notenavbar'>
-                        //         <div>
-                        //             <img src={arrowbutton} alt="<---" className='arrowimage' onClick={handleMobileviewclose} />
-                        //         </div>
-                        //         <div className='divchoicecircle' style={{ backgroundColor: `${OpenNotes.color}`, border: "none" }}>{OpenNotes.iconname}</div>
-                        //         <div style={{ fontSize: '20px' }}>
-                        //             {OpenNotes.name}
-                        //         </div>
-                        //     </div>
-                        //     <div  className='notesarray'>
-                        //         {mynotes.map((element, index) => (
-                        //             <div key={index}>
-                        //                 {element.name === OpenNotes.name && element.notes.map((value, index) => (
-                        //                     <div className='contentbox' key={index}>
-                        //                         <div style={{ textAlign: "justify", lineHeight: '24px' }} className='valueNotes'>{value.note}</div>
-                        //                         <div style={{ textAlign: 'end', fontWeight: "600", marginTop: '2px' }}>{value.notedate}  &bull; {value.notetime}</div>
-                        //                     </div>
-                        //                 ))
-                        //                 }
-                        //             </div>
-                        //         ))}
-                        //     </div>
-                        //     <div>
-                        //         <div className='textareadiv'>
-                        //             <textarea name="note" id="inputnotes" cols={130} rows={7} value={NotesDetails.note} onChange={handlechange} placeholder='Here’s the sample text for sample work'></textarea>
-                        //         </div>
-                        //     </div>
-                        // </div>
                     }
                 </div>
             </div>
