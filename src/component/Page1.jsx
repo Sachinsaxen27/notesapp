@@ -149,7 +149,7 @@ function Page1() {
                                 </div>
                             </div>
                         </div>
-                        <div style={{height:'37.5rem'}}>
+                        <div style={{height:'33rem'}}>
                             {mynotes.map((element, index) => (
                                 <div key={index} className='notedivcontentarray'>
                                     {element.name === OpenNotes.name && element.notes.map((value, index) => (
