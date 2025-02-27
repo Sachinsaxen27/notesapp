@@ -98,18 +98,6 @@ function Page1() {
         }
         setMyNoteDetails({ note: '', notedate: '', notetime: "" })
     }
-    // const [width, setWidth] = useState(window.innerWidth);
-    // const widthRef = useRef(window.innerWidth);
-    // useEffect(() => {
-    //     const handleResize = () => {
-    //         if (widthRef.current !== window.innerWidth) {
-    //             setWidth(window.innerWidth);
-    //             widthRef.current = window.innerWidth;
-    //         }
-    //     };
-    //     window.addEventListener("resize", handleResize);
-    //     return () => window.removeEventListener("resize", handleResize);
-    // }, []);
     return (
         <>
             <div className='firstdiv'>
