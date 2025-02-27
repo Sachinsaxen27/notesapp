@@ -456,7 +456,7 @@
     }
     .notedivcontentarray{
         overflow-y: scroll;
-        height: 37rem;
+        height: 37.5rem;
     }
     .valueNotes {
         font-size: 12px;
