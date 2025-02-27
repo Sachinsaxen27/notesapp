@@ -333,7 +333,7 @@
     }
 
     .disouteroptionlist {
-        height: calc(100vh - 9rem);
+        height: calc(100vh - 12rem);
         margin-top: 10px;
         width: 30rem;
     }
