@@ -363,8 +363,7 @@
     }
 
     .addnotebutton {
-        bottom: 1.5rem;
-        margin-left: auto;
+        bottom: 6rem;
         margin-right: auto;
         display: flex;
         justify-content: center;
@@ -373,7 +372,7 @@
         font-size: 39px;
         width: 4rem;
         height: 4rem;
-        background-color: #007bff;
+        background-color: #16008B;
         color: white;
         border: none;
         cursor: pointer;
