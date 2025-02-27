@@ -160,7 +160,7 @@ function Page1() {
                                 }
                             </div>
                         ))}
-                        <div style={{position:'absolute',top:'40rem'}}>
+                        <div style={{position:'absolute',top:'35rem'}}>
                             <textarea name="note" id="inputnotes" cols={130} rows={7} value={NotesDetails.note} onChange={handlechange} placeholder='Here’s the sample text for sample work' className='notetextarea'></textarea>
                         </div>
                         <img src={sendbutton} alt="send button" className='imagebutton' onClick={handleupdatetime} />
