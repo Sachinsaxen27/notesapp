@@ -374,17 +374,15 @@
         height: 4rem;
         background-color: #16008B;
         color: white;
-        border: none;
-        cursor: pointer;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
 
     .divgroupform {
         width: 24rem;
-        margin: auto;
-        position: fixed;
-        left: 1.5rem;
-        bottom: 14rem;
+        position: sticky;
+        margin-top: auto;
+        margin-left: auto;
+        margin-right: 25px;
     }
 
     .formheading {
