@@ -98,6 +98,7 @@ function Page1() {
         }
         setMyNoteDetails({ note: '', notedate: '', notetime: "" })
     }
+    // localStorage.clear()
     return (
         <>
             <div className='firstdiv'>
@@ -118,7 +119,7 @@ function Page1() {
                                         {value.name}
                                     </div>
                                 </div>
-                            }) : <div style={{textAlign:"center",marginTop:'15rem'}}>
+                            }) : <div style={{textAlign:"center",marginTop:'15rem',marginRight:'50px'}}>
                                 <h4>No Available Notes Group</h4>
                             </div>
                             }

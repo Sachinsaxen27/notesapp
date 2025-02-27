@@ -17,7 +17,7 @@
     justify-content: flex-start;
     margin: auto;
     height: auto;
-    /* overflow: hidden; */
+    overflow: hidden;
 }
 
 .notedivcontent {
@@ -56,8 +56,7 @@
 }
 
 .divheading {
-    position: sticky;
-    top: 3rem;
+    margin-top: 15px;
 }
 
 .pocektnoteheading {
@@ -307,7 +306,9 @@
         height: fit-content;
         display: block;
     }
-
+    .divheading{
+        margin-top: 15px;
+    }
     /* .noNotesdiv {
         display: none;
     } */
@@ -318,10 +319,6 @@
         /* display: none !important; */
     }
 
-    .divheading {
-        position: sticky;
-        top: 1.5rem;
-    }
 
     .pocektnoteheading {
         margin: 0px;
