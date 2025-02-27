@@ -14,15 +14,15 @@
 
 .firstdiv {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     margin: auto;
-    height: 100vh;
-    overflow: hidden;
+    height: auto;
+    /* overflow: hidden; */
 }
 
 .notedivcontent {
     /* border: 1px solid; */
-    width: 70vw;
+    width: 70rem;
     background-color: #DAE5F5;
 }
 
@@ -50,7 +50,7 @@
 }
 
 .notedivoption {
-    width: 30vw;
+    width: 26rem;
     display: flex;
     flex-direction: column;
 }
@@ -87,7 +87,7 @@
     cursor: pointer;
     position: sticky;
     bottom: 10px;
-    margin-left: 22rem;
+    margin-left: 19rem;
     margin-right: auto;
 }
 
@@ -127,6 +127,7 @@
     flex-direction: column;
     align-items: center;
     margin-top: 9rem;
+    margin-bottom: 7.8rem;
 }
 
 /* input: */
@@ -234,6 +235,12 @@
     color: #fff;
 }
 
+.notesarray {
+    overflow-y: scroll;
+    height: 27rem;
+    width: 70rem;
+}
+
 .contentbox {
     margin: 16px;
     padding: 15px;
@@ -269,7 +276,8 @@
     cursor: pointer;
     height: fit-content;
     bottom: 3.6rem;
-    left: 63.5rem;
+    margin-right: auto;
+    left: 64rem;
 }
 
 @media screen and (max-width:430px) {
@@ -422,13 +430,6 @@
         margin-right: 25px;
     }
 
-    .imagebutton {
-        width: 23px;
-        pointer-events: auto;
-        left: 25.5rem;
-        right: auto;
-        bottom: 4rem;
-    }
 
     .noteareadiv {
         width: 30rem;
@@ -440,29 +441,44 @@
 
     .notenavbar {
         padding-left: 35px;
+        padding-top: 20px;
     }
 
     .valueNotes {
         font-size: 12px;
     }
 
+    .notesarray {
+        overflow-y: scroll;
+        height: 27rem;
+        width: 30rem;
+    }
+
     .contentbox {
+        width: 24.6rem;
         font-size: 10px;
         line-height: 20px;
         margin: 10px 30px 10px 40px;
     }
 
+    .imagebutton {
+        width: 23px;
+        pointer-events: auto;
+        left: 27rem;
+        right: auto;
+        bottom: 3rem;
+    }
+
     .textareadiv {
         padding-top: 7px;
         padding-bottom: 7px;
-        position: relative;
-        width: 25.6rem;
-        margin: auto;
-        bottom: 1.6rem;
+        /* position: relative; */
+        width: 27em;
+        margin-left: 27px;
     }
 
     .textareadiv textarea {
-        height: 6.9rem;
+        height: 7.6rem;
         font-size: 14px;
         border-radius: 5px;
     }

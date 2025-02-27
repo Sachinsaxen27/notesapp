@@ -145,7 +145,7 @@ function Page1() {
                                     {OpenNotes.name}
                                 </div>
                             </div>
-                            <div style={{ overflowY: "scroll", height: "27rem" }}>
+                            <div  className='notesarray'>
                                 {mynotes.map((element, index) => (
                                     <div key={index}>
                                         {element.name === OpenNotes.name && element.notes.map((value, index) => (
