@@ -244,10 +244,12 @@
     height: 27rem;
     width: 70rem;
 }
-.notedivcontentarray{
+
+.notedivcontentarray {
     height: 30rem;
     overflow-y: scroll;
 }
+
 .contentbox {
     margin: 16px;
     padding: 15px;
@@ -442,7 +444,9 @@
 
 
     .noteareadiv {
-        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
         width: 30rem;
     }
 
@@ -454,10 +458,12 @@
         padding-left: 50px;
         padding-top: 20px;
     }
-    .notedivcontentarray{
+
+    .notedivcontentarray {
         overflow-y: scroll;
         height: 37.5rem;
     }
+
     .valueNotes {
         font-size: 12px;
     }
@@ -472,7 +478,7 @@
         width: 23rem;
         font-size: 10px;
         line-height: 20px;
-        margin-left:40px;
+        margin-left: 40px;
     }
 
     .imagebutton {
@@ -491,7 +497,7 @@
         margin-left: 27px;
     }
 
-    .notetextarea{
+    .notetextarea {
         width: 24.5rem;
         border: 15px solid blue;
         margin-left: 28px;
