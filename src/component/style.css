@@ -363,13 +363,21 @@
     }
 
     .addnotebutton {
-        border-radius: 4rem;
+        bottom: 1.5rem;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
         font-size: 39px;
         width: 4rem;
         height: 4rem;
-        bottom:19rem;
-        margin-bottom: auto;
-        margin-left: 22.2rem;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        cursor: pointer;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
 
     .divgroupform {
@@ -436,9 +444,11 @@
     .notenavbar {
         padding-left: 35px;
     }
-    .valueNotes{
+
+    .valueNotes {
         font-size: 12px;
     }
+
     .contentbox {
         font-size: 10px;
         line-height: 20px;
