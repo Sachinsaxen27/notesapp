@@ -374,7 +374,9 @@
     .divgroupform {
         width: 24rem;
         margin: auto;
-        margin-right: 8px;
+        position: fixed;
+        left: 4rem;
+        bottom: 30rem;
     }
 
     .formheading {
