@@ -21,7 +21,7 @@
 
 .notedivcontent {
     /* border: 1px solid; */
-    width: 72.3rem;
+    width: 70vw;
     background-color: #DAE5F5;
 }
 
@@ -33,6 +33,7 @@
     margin: 0px auto;
     text-align: center;
 }
+
 .leftheading {
     position: sticky;
     top: 3rem;
@@ -48,6 +49,7 @@
 }
 
 .notedivoption {
+    width: 30vw;
     display: flex;
     flex-direction: column;
 }
@@ -56,7 +58,6 @@
     position: sticky;
     top: 3rem;
 }
-
 .pocektnoteheading {
     margin: 0px;
     text-align: center;
@@ -113,9 +114,11 @@
     justify-content: center;
     color: #FFFFFF;
 }
-.selectCirelceName{
+
+.selectCirelceName {
     font-size: 20px;
 }
+
 .noNotesdiv {
     text-align: center;
     display: flex;
@@ -137,7 +140,11 @@
     flex-direction: column;
     box-shadow: 0px 0px 2px 0.3px;
 }
-
+.imagenonotes{
+    width:-webkit-fill-available;
+    object-fit: contain;
+    height: 20rem;
+}
 .ptagform {
     margin: 0px;
     margin-right: 30px;
@@ -189,7 +196,14 @@
 .inputcreategroup[type=text] {
     padding-left: 14px;
 }
-
+.perror{
+    margin: auto;
+    font-size: 11px;
+    letter-spacing: 1px;
+    color: red;
+    margin-top: 5px;
+    margin-left: 10px;
+}
 .colourlistoption {
     width: 40px;
     height: 40px;
@@ -242,10 +256,10 @@
     cursor: pointer;
     height: fit-content;
     bottom: 3.6rem;
-    left: 68.5rem;
+    left: 63.5rem;
 }
 
-@media screen and (max-width:480px) {
+@media screen and (max-width:430px) {
     ::-webkit-scrollbar {
         width: 10px;
     }
@@ -266,16 +280,18 @@
     }
 
     .notedivoption {
-        display: flex;
-        /* display: none; */
-        flex-direction: column;
-        width: 30rem;
+        width: 100vw;
+    }
+
+    .noNotesdiv {
+        display: none;
     }
 
     .notedivcontent {
-        width: 39rem;
-        display: none;   
+        /* width: 39rem; */
+        display: none !important;
     }
+
     .divheading {
         position: sticky;
         top: 1.5rem;
@@ -314,16 +330,19 @@
         font-weight: 600;
         color: #f1f1f1;
     }
-    .divchoicecircle1{
+
+    .divchoicecircle1 {
         width: 2.5rem;
         height: 2.5rem;
         font-size: 16px;
         font-weight: 600;
         color: #f1f1f1;
     }
-    .selectCirelceName{
-        font-size:16px;
+
+    .selectCirelceName {
+        font-size: 16px;
     }
+
     .addnotebutton {
         border-radius: 4rem;
         font-size: 39px;
@@ -337,7 +356,7 @@
     .divgroupform {
         width: 24rem;
         margin: auto;
-        left: 0px;
+        margin-right: 8px;
     }
 
     .formheading {
@@ -345,7 +364,7 @@
     }
 
     .ptagform {
-        width: 11rem;
+        width:8.2rem;
         font-size: 12px;
         margin-right: 0px;
     }
@@ -353,12 +372,16 @@
     .inputcreategroup {
         height: 25px;
         font-size: 12px;
+        width: auto;
     }
-
     .inputcreategroup:placeholder-shown {
         font-size: 12px;
     }
-
+    .perror{
+        font-size: 9px;
+        letter-spacing: 0.7px;
+        margin-left: 0px;
+    }
     .colourlistoption {
         height: 20px;
         width: 20px;
@@ -374,6 +397,7 @@
         bottom: 45px;
         left: 27.2rem;
         width: 23px;
+        pointer-events: auto;
     }
 
     .noteareadiv {
@@ -385,21 +409,22 @@
     }
 
     .notenavbar {
-        padding-left: 20px;
+        padding-left: 35px;
     }
 
     .contentbox {
-        height: 9.5rem;
         font-size: 14px;
-        line-height: 25px;
-        margin-left: 25px;
+        line-height: 20px;
+        margin-left: 40px;
     }
 
     .textareadiv {
         padding-top: 7px;
         padding-bottom: 7px;
         position: relative;
-        bottom: 7px;
+        top: 16px;
+        left: 27px;
+        width: 27.1rem;
     }
 
     .textareadiv textarea {
