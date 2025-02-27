@@ -234,12 +234,20 @@
     color: #fff;
 }
 
+.notenavitem {
+    display: flex;
+    align-items: center;
+}
+
 .notesarray {
     overflow-y: scroll;
     height: 27rem;
     width: 70rem;
 }
-
+.notedivcontentarray{
+    height: 30rem;
+    overflow-y: scroll;
+}
 .contentbox {
     margin: 16px;
     padding: 15px;
@@ -259,9 +267,12 @@
     padding-right: 10px;
 }
 
-.textareadiv textarea {
+.notetextarea {
     font-size: 20px;
     resize: none;
+    border: 10px solid blue;
+    width: 98%;
+    height: 7.8rem;
 }
 
 .textareadiv textarea::placeholder {
@@ -276,7 +287,7 @@
     height: fit-content;
     bottom: 3.6rem;
     margin-right: auto;
-    left: 64rem;
+    left: 66rem;
 }
 
 @media screen and (max-width:430px) {
@@ -306,9 +317,11 @@
         height: fit-content;
         display: block;
     }
-    .divheading{
+
+    .divheading {
         margin-top: 15px;
     }
+
     /* .noNotesdiv {
         display: none;
     } */
@@ -327,7 +340,7 @@
     }
 
     .divfirstouteroptionlist {
-        
+
         margin-top: 0px;
         height: auto;
     }
@@ -386,7 +399,7 @@
         position: sticky;
         margin-top: auto;
         margin-left: auto;
-        margin-right: 25px; 
+        margin-right: 25px;
         bottom: 50vh;
     }
 
@@ -429,6 +442,7 @@
 
 
     .noteareadiv {
+        height: 100vh;
         width: 30rem;
     }
 
@@ -440,7 +454,10 @@
         padding-left: 35px;
         padding-top: 20px;
     }
-
+    .notedivcontentarray{
+        overflow-y: scroll;
+        height: 40rem;
+    }
     .valueNotes {
         font-size: 12px;
     }
@@ -452,17 +469,16 @@
     }
 
     .contentbox {
-        width: 24.6rem;
+        width: 23rem;
         font-size: 10px;
         line-height: 20px;
-        margin: 10px 30px 10px 40px;
+        margin-left:40px;
     }
 
     .imagebutton {
         width: 23px;
         pointer-events: auto;
-        left: 27rem;
-        right: auto;
+        left: 25rem;
         bottom: 3rem;
     }
 
@@ -474,10 +490,13 @@
         margin-left: 27px;
     }
 
-    .textareadiv textarea {
-        height: 7.6rem;
+    .notetextarea{
+        width: 24.5rem;
+        border: 15px solid blue;
+        margin-left: 28px;
+        /* height: 7.6rem; */
         font-size: 14px;
-        border-radius: 5px;
+        /* border-radius: 5px; */
     }
 
     .textareadiv textarea::placeholder {

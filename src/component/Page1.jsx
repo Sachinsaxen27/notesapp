@@ -5,6 +5,7 @@ import image1 from './image/nonotes.png'
 import sendbutton from './image/sendbutton.png'
 import arrowbutton from './image/arrow.png'
 import CreateNoteForm from './CreateNoteForm'
+import { toast, ToastContainer } from 'react-toastify'
 function Page1() {
     document.addEventListener('keydown', (event) => { if (event.key === 'Enter') { handleupdatetime() } })
     const [NotesDetails, setMyNoteDetails] = useState({ note: '', notedate: '', notetime: "" })
@@ -82,21 +83,24 @@ function Page1() {
             ...prestate,
             notes: notesotre
         }))
+        if (NotesDetails.note.length !== 0) {
 
-        if (mynotes.length === 0) {
-            localStorage.setItem('submitnotes', JSON.stringify([OpenNotes]))
-        } else if (Array.isArray(mynotes)) {
-            let existnoteobject = mynotes.find(note => note.name === OpenNotes.name)
-            if (existnoteobject) {
-                // existnoteobject.notes=existnoteobject.note||[]
-                existnoteobject.notes.push(NotesDetails)
-            } else {
-                mynotes.push(OpenNotes)
+            if (mynotes.length === 0) {
+                localStorage.setItem('submitnotes', JSON.stringify([OpenNotes]))
+            } else if (Array.isArray(mynotes)) {
+                let existnoteobject = mynotes.find(note => note.name === OpenNotes.name)
+                if (existnoteobject) {
+                    // existnoteobject.notes=existnoteobject.note||[]
+                    existnoteobject.notes.push(NotesDetails)
+                } else {
+                    mynotes.push(OpenNotes)
+                }
+                localStorage.setItem('submitnotes', JSON.stringify(mynotes));
             }
-
-            localStorage.setItem('submitnotes', JSON.stringify(mynotes));
+            setMyNoteDetails({ note: '', notedate: '', notetime: "" })
+        }else{
+            toast.error('Enter your note')
         }
-        setMyNoteDetails({ note: '', notedate: '', notetime: "" })
     }
     // localStorage.clear()
     return (
@@ -119,7 +123,7 @@ function Page1() {
                                         {value.name}
                                     </div>
                                 </div>
-                            }) : <div style={{textAlign:"center",marginTop:'15rem',marginRight:'50px'}}>
+                            }) : <div style={{ textAlign: "center", marginTop: '15rem', marginRight: '50px' }}>
                                 <h4>No Available Notes Group</h4>
                             </div>
                             }
@@ -135,39 +139,65 @@ function Page1() {
                             <p>Send and receive messages without keeping your phone online. <br />
                                 Use Pocket Notes on up to 4 linked devices and 1 mobile phone</p>
                         </div>
-                    </div> :
-                        <div className='noteareadiv'>
-                            <div className='notenavbar'>
-                                <div>
-                                    <img src={arrowbutton} alt="<---" className='arrowimage' onClick={handleMobileviewclose} />
-                                </div>
+                    </div> : <div className='noteareadiv'>
+                        <div className="notenavbar">
+                            <div className='notenavitem'>
+                                <img src={arrowbutton} alt="<--" onClick={handleMobileviewclose} />
                                 <div className='divchoicecircle' style={{ backgroundColor: `${OpenNotes.color}`, border: "none" }}>{OpenNotes.iconname}</div>
-                                <div style={{ fontSize: '20px' }}>
+                                <div>
                                     {OpenNotes.name}
                                 </div>
                             </div>
-                            <div  className='notesarray'>
-                                {mynotes.map((element, index) => (
-                                    <div key={index}>
-                                        {element.name === OpenNotes.name && element.notes.map((value, index) => (
-                                            <div className='contentbox' key={index}>
-                                                <div style={{ textAlign: "justify", lineHeight: '24px' }} className='valueNotes'>{value.note}</div>
-                                                <div style={{ textAlign: 'end', fontWeight: "600", marginTop: '2px' }}>{value.notedate}  &bull; {value.notetime}</div>
-                                            </div>
-                                        ))
-                                        }
+                        </div>
+                        {mynotes.map((element, index) => (
+                            <div key={index} className='notedivcontentarray'>
+                                {element.name === OpenNotes.name && element.notes.map((value, index) => (
+                                    <div className='contentbox' key={index}>
+                                        <div style={{ textAlign: "justify", lineHeight: '24px' }} className='valueNotes'>{value.note}</div>
+                                        <div style={{ textAlign: 'end', fontWeight: "600", marginTop: '2px' }}>{value.notedate}  &bull; {value.notetime}</div>
                                     </div>
-                                ))}
+                                ))
+                                }
                             </div>
-                            <div>
-                                <div className='textareadiv'>
-                                    <textarea name="note" id="inputnotes" cols={130} rows={7} value={NotesDetails.note} onChange={handlechange} placeholder='Here’s the sample text for sample work'></textarea>
-                                </div>
-                                <img src={sendbutton} alt="send button" className='imagebutton' onClick={handleupdatetime} />
-                            </div>
-                        </div>}
+                        ))}
+                        <div>
+                            <textarea name="note" id="inputnotes" cols={130} rows={7} value={NotesDetails.note} onChange={handlechange} placeholder='Here’s the sample text for sample work' className='notetextarea'></textarea>
+                        </div>
+                        <img src={sendbutton} alt="send button" className='imagebutton' onClick={handleupdatetime} />
+                    </div>
+                        // <div className='noteareadiv'>
+                        //     <div className='notenavbar'>
+                        //         <div>
+                        //             <img src={arrowbutton} alt="<---" className='arrowimage' onClick={handleMobileviewclose} />
+                        //         </div>
+                        //         <div className='divchoicecircle' style={{ backgroundColor: `${OpenNotes.color}`, border: "none" }}>{OpenNotes.iconname}</div>
+                        //         <div style={{ fontSize: '20px' }}>
+                        //             {OpenNotes.name}
+                        //         </div>
+                        //     </div>
+                        //     <div  className='notesarray'>
+                        //         {mynotes.map((element, index) => (
+                        //             <div key={index}>
+                        //                 {element.name === OpenNotes.name && element.notes.map((value, index) => (
+                        //                     <div className='contentbox' key={index}>
+                        //                         <div style={{ textAlign: "justify", lineHeight: '24px' }} className='valueNotes'>{value.note}</div>
+                        //                         <div style={{ textAlign: 'end', fontWeight: "600", marginTop: '2px' }}>{value.notedate}  &bull; {value.notetime}</div>
+                        //                     </div>
+                        //                 ))
+                        //                 }
+                        //             </div>
+                        //         ))}
+                        //     </div>
+                        //     <div>
+                        //         <div className='textareadiv'>
+                        //             <textarea name="note" id="inputnotes" cols={130} rows={7} value={NotesDetails.note} onChange={handlechange} placeholder='Here’s the sample text for sample work'></textarea>
+                        //         </div>
+                        //     </div>
+                        // </div>
+                    }
                 </div>
             </div>
+            <ToastContainer/>
             {Showform && <CreateNoteForm formpop={formpop} closeform={() => setMyShowForm(false)} />}
         </>
     )
