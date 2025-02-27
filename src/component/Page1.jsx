@@ -98,7 +98,7 @@ function Page1() {
                 localStorage.setItem('submitnotes', JSON.stringify(mynotes));
             }
             setMyNoteDetails({ note: '', notedate: '', notetime: "" })
-        }else{
+        } else {
             toast.error('Enter your note')
         }
     }
@@ -149,18 +149,20 @@ function Page1() {
                                 </div>
                             </div>
                         </div>
-                        {mynotes.map((element, index) => (
-                            <div key={index} className='notedivcontentarray'>
-                                {element.name === OpenNotes.name && element.notes.map((value, index) => (
-                                    <div className='contentbox' key={index}>
-                                        <div style={{ textAlign: "justify", lineHeight: '24px' }} className='valueNotes'>{value.note}</div>
-                                        <div style={{ textAlign: 'end', fontWeight: "600", marginTop: '2px' }}>{value.notedate}  &bull; {value.notetime}</div>
-                                    </div>
-                                ))
-                                }
-                            </div>
-                        ))}
-                        <div style={{position:'absolute',top:'35rem'}}>
+                        <div style={{height:'37.5rem'}}>
+                            {mynotes.map((element, index) => (
+                                <div key={index} className='notedivcontentarray'>
+                                    {element.name === OpenNotes.name && element.notes.map((value, index) => (
+                                        <div className='contentbox' key={index}>
+                                            <div style={{ textAlign: "justify", lineHeight: '24px' }} className='valueNotes'>{value.note}</div>
+                                            <div style={{ textAlign: 'end', fontWeight: "600", marginTop: '2px' }}>{value.notedate}  &bull; {value.notetime}</div>
+                                        </div>
+                                    ))
+                                    }
+                                </div>
+                            ))}
+                        </div>
+                        <div style={{ position: 'relative', marginTop: "5px", marginBottom: '5px' }}>
                             <textarea name="note" id="inputnotes" cols={130} rows={7} value={NotesDetails.note} onChange={handlechange} placeholder='Here’s the sample text for sample work' className='notetextarea'></textarea>
                         </div>
                         <img src={sendbutton} alt="send button" className='imagebutton' onClick={handleupdatetime} />
@@ -168,7 +170,7 @@ function Page1() {
                     }
                 </div>
             </div>
-            <ToastContainer/>
+            <ToastContainer />
             {Showform && <CreateNoteForm formpop={formpop} closeform={() => setMyShowForm(false)} />}
         </>
     )
