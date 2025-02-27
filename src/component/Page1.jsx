@@ -150,7 +150,7 @@ function Page1() {
                                     <div key={index}>
                                         {element.name === OpenNotes.name && element.notes.map((value, index) => (
                                             <div className='contentbox' key={index}>
-                                                <div style={{ textAlign: "justify", lineHeight: '24px' }}>{value.note}</div>
+                                                <div style={{ textAlign: "justify", lineHeight: '24px' }} className='valueNotes'>{value.note}</div>
                                                 <div style={{ textAlign: 'end', fontWeight: "600", marginTop: '2px' }}>{value.notedate}  &bull; {value.notetime}</div>
                                             </div>
                                         ))
