@@ -30,9 +30,9 @@ function CreateNoteForm(props) {
     }
     const handlevalueChange = (e) => {
         setMyNotesDetails({ ...Notedetails, [e.target.name]: e.target.value })
-        if(Notedetails.name.trim().length>2){
+        if (Notedetails.name.trim().length > 2) {
             setMyNoteError(false)
-        }   
+        }
     }
     const handlecolorChange = (color) => {
         setMyNotesDetails({ ...Notedetails, color: color })
@@ -50,13 +50,13 @@ function CreateNoteForm(props) {
                         </p>
                         {/* <div style={{width:'10rem',height:'2rem'}}>
                         </div> */}
-                        <div style={{width:'15.7rem'}}>
+                        <div style={{ width: '15.7rem' }}>
                             <input type="text" name="name" value={Notedetails.name} className='inputcreategroup' id="name" placeholder='Enter group name' onChange={handlevalueChange} />
                             {NoteError && <p className='perror'>Group name should have at least 4 Character</p>}
                         </div>
-                        
+
                     </label>
-                    <div style={{ display: 'flex', alignItems: 'center' }}>
+                    <div className='optionColorChoose'>
                         <p className='ptagcolourchoose'>
                             Choose Colour
                         </p>

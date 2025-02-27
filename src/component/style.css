@@ -153,7 +153,7 @@
 
 .ptagcolourchoose {
     margin: 0px;
-    margin-right: 30px;
+    margin-right: 12px;
     margin-left: 20px;
 }
 
@@ -182,7 +182,7 @@
 }
 
 .inputcreategroup {
-    width: 20rem;
+    width: -webkit-fill-available;
     height: 30px;
     border-radius: 8px;
     margin-right: 20px;
@@ -203,6 +203,12 @@
     color: red;
     margin-top: 5px;
     margin-left: 10px;
+}
+.optionColorChoose{
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    padding-right: 15px;
 }
 .colourlistoption {
     width: 40px;
@@ -372,7 +378,7 @@
     .inputcreategroup {
         height: 25px;
         font-size: 12px;
-        width: auto;
+        width:fit-content;
     }
     .inputcreategroup:placeholder-shown {
         font-size: 12px;
