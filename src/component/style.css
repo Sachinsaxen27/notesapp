@@ -327,12 +327,13 @@
     }
 
     .divfirstouteroptionlist {
+        
         margin-top: 0px;
         height: auto;
     }
 
     .disouteroptionlist {
-        height: 48rem;
+        height: calc(100vh - 9rem);
         margin-top: 10px;
         width: 30rem;
     }
@@ -368,11 +369,7 @@
     }
 
     .addnotebutton {
-        bottom: 20rem;
         margin-right: auto;
-        display: flex;
-        justify-content: center;
-        align-items: center;
         border-radius: 50%;
         font-size: 39px;
         width: 4rem;
@@ -380,7 +377,7 @@
         background-color: #16008B;
         color: white;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        margin-left: 22rem;
+        float: right;
     }
 
     .divgroupform {
