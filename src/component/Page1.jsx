@@ -44,7 +44,7 @@ function Page1() {
         console.log("Function Handle Mobile View Close")
         const element = document.getElementById('leftnotediv')
         const element2 = document.getElementById('rightnotediv')
-        if (element.style.display==='none') {
+        if (element.style.display === 'none') {
             element.style.display = 'block'
             element2.style.display = 'none'
         }
@@ -118,7 +118,10 @@ function Page1() {
                                         {value.name}
                                     </div>
                                 </div>
-                            }) : "No Data"}
+                            }) : <div style={{textAlign:"center",marginTop:'15rem'}}>
+                                <h4>No Available Notes Group</h4>
+                            </div>
+                            }
                         </div>
                         <button className='addnotebutton ' onClick={() => setMyShowForm(true)}>+</button>
                     </div>
