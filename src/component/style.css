@@ -26,10 +26,6 @@
     background-color: #DAE5F5;
 }
 
-.noteareadiv {
-    height: 43.7rem;
-}
-
 .leftheading h1 {
     margin: 0px auto;
     text-align: center;
@@ -85,7 +81,7 @@
     background-color: #16008B;
     cursor: pointer;
     position: sticky;
-    bottom: 10px;
+    bottom: 40px;
     margin-left: 19rem;
     margin-right: auto;
 }
@@ -244,9 +240,7 @@
     height: 27rem;
     width: 70rem;
 }
-.divoutercontentarray{
-    height: 32rem;
-}
+
 .notedivcontentarray {
     height: calc(100vh - 13.5rem);
     overflow-y: auto;
@@ -448,7 +442,6 @@
     .noteareadiv {
         display: flex;
         flex-direction: column;
-        height: 100%;
         width: 30rem;
     }
 
