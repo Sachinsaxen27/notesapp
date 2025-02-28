@@ -10,11 +10,11 @@ function Page1() {
     document.addEventListener('keydown', (event) => { if (event.key === 'Enter') { handleupdatetime() } })
     const [NotesDetails, setMyNoteDetails] = useState({ note: '', notedate: '', notetime: "" })
     const [Showform, setMyShowForm] = useState(false)
-    const formpop = useRef(false)
+    const formpop = useRef(null)
     const notelist = JSON.parse(localStorage.getItem('noteName'))
-
     useEffect(() => {
         const handleClickOutside = (event) => {
+            console.log("event",event, Showform)
             if (formpop.current && !formpop.current.contains(event.target)) {
                 setMyShowForm(false);
             }
@@ -110,7 +110,6 @@ function Page1() {
                         <h1 className='pocektnoteheading' >Pocket Note</h1>
                     </div>
                     <div className='divfirstouteroptionlist'>
-                        <button className='addnotebutton ' onClick={() => setMyShowForm(true)}>+</button>
                         <div className='disouteroptionlist'>
                             {notelist ? notelist.map((value, index) => {
                                 const [firstName, lastName] = value.name.split(" ");
@@ -127,6 +126,7 @@ function Page1() {
                             </div>
                             }
                         </div>
+                        <button className='addnotebutton' onClick={(event) => {setMyShowForm(true)}}>+</button>
                     </div>
                 </div>
 

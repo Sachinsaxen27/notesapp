@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import { toast, ToastContainer } from 'react-toastify'
 function CreateNoteForm(props) {
+    console.log("Enter",props.formpop)
     const colorarray = ["#B38BFA", "#FF79F2", "#43E6FC", "#F19576", "#0047FF", "#6691FF"]
     const [Notedetails, setMyNotesDetails] = useState({ name: '', color: "" })
     const [NoteError, setMyNoteError] = useState(false)
-    console.log(NoteError)
     const handlesubmit = (e) => {
         e.preventDefault()
         let storevalue = JSON.parse(localStorage.getItem('noteName'))
@@ -48,8 +48,6 @@ function CreateNoteForm(props) {
                         <p className='ptagform'>
                             Group Name
                         </p>
-                        {/* <div style={{width:'10rem',height:'2rem'}}>
-                        </div> */}
                         <div style={{ width: '15.7rem' }}>
                             <input type="text" name="name" value={Notedetails.name} className='inputcreategroup' id="name" placeholder='Enter group name' onChange={handlevalueChange} />
                             {NoteError && <p className='perror'>Group name should have at least 4 Character</p>}

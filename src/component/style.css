@@ -1,34 +1,35 @@
-.container{
+.container {
     height: calc(100vh - 0.2rem);
     display: flex;
     overflow: hidden;
 }
 
-.noteslist{
+.noteslist {
     max-width: 26rem;
     min-width: 16rem;
     padding: 1rem 0;
     height: calc(100vh - 2.3rem);
     overflow: hidden;
-    width: 100%;;
+    width: 100%;
+    ;
 }
 
-.pocektnoteheading{
+.pocektnoteheading {
     text-align: center;
     margin: 1rem;
 }
 
-.divfirstouteroptionlist{
-    height: calc(100vh - 5.8rem);
+.divfirstouteroptionlist {
+    height: calc(100vh - 4.8rem);
 }
 
-.divChatDialogList{
+.divChatDialogList {
     width: calc(100vw - 26rem);
     min-width: 25.76rem;
     background-color: #dae5f5;
 }
 
-.addnotebutton{
+.addnotebutton {
     border-radius: 4rem;
     font-size: 45px;
     width: 4rem;
@@ -36,7 +37,8 @@
     color: #fff;
     background-color: #16008B;
     position: sticky;
-    top: 100%;
+    /* top: 100%; */
+    bottom: 10px;
     float: right;
     margin-right: 1rem;
     margin-bottom: 3rem;
@@ -52,7 +54,7 @@
     flex-direction: column;
     position: relative;
     width: 96%;
-    top: -5rem;
+    /* top: -5rem; */
     overflow-y: auto;
 }
 
@@ -99,8 +101,8 @@
     color: #fff;
 }
 
-.divoutercontentarray{
-    height: calc(100vh - 13rem);
+.divoutercontentarray {
+    height: calc(100vh - 14.1rem);
     overflow-y: auto;
     border: 1px solid red;
 }
@@ -120,6 +122,7 @@
 
 .contentbox {
     /* max-width: 50%; */
+    max-width: -webkit-fill-available;
     min-width: 20rem;
     width: 100%;
     margin: 16px;
@@ -130,26 +133,126 @@
     border-radius: 5px;
 }
 
+/* Create Form Group CSS */
+.divgroupform {
+    bottom: 50vh;
+    width: max-content;
+    border-radius: 10px;
+    position: sticky;
+    z-index: 100;
+    margin: auto;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 0px 2px 0.3px;
+}
+
+.formheading {
+    margin: auto;
+    margin-left: 20px;
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.ptagform {
+    margin: 0px;
+    margin-right: 30px;
+    margin-left: 20px;
+}
+
+.inputcreategroup {
+    width: -webkit-fill-available;
+    height: 30px;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+
+.inputcreategroup:placeholder-shown {
+    color: #001F8B;
+    font-size: 14px;
+}
+
+.inputcreategroup[type=text] {
+    padding-left: 14px;
+}
+
+.optionColorChoose {
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    padding-right: 15px;
+}
+
+.ptagcolourchoose {
+    margin: 0px;
+    margin-right: 12px;
+    margin-left: 20px;
+}
+
+.colourlistoption {
+    width: 40px;
+    height: 40px;
+    border-radius: 30px;
+    margin-left: 4px;
+    margin-right: 4px;
+    cursor: pointer;
+}
+
+.buttoncreate {
+    background-color: #001F8B;
+    color: white;
+    width: 6rem;
+    height: 2rem;
+    border-radius: 8px;
+    margin: auto;
+    margin-right: 10px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+.perror {
+    margin: auto;
+    font-size: 11px;
+    letter-spacing: 1px;
+    color: red;
+    margin-top: 5px;
+    margin-left: 10px;
+}
+
 @media screen and (max-width:430px) {
-    .noteslist{
+    .noteslist {
         min-width: 100vw;
     }
-    .noNotesdiv{
+
+    .noNotesdiv {
         display: none;
     }
 
-    .textBox{
+    .textBox {
         width: 100vw;
         position: absolute;
         bottom: 0px;
     }
 
-    .divChatDialogList{
+    .divChatDialogList {
         min-width: 100vw;
     }
 
     .contentbox {
         max-width: -webkit-fill-available;
         min-width: 14rem;
+    }
+
+    .divgroupform {
+        max-width: 25rem;
+        font-size: 13px;
+    }
+
+    .colourlistoption {
+        width: 30px;
+        height: 30px;
+    }
+    .perror {
+        font-size: 9px;
     }
 }
