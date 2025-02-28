@@ -1,87 +1,34 @@
-::-webkit-scrollbar {
-    width: 10px;
-}
-
-::-webkit-scrollbar-track {
-    background: #f1f1f1;
-    background-color: inherit;
-}
-
-::-webkit-scrollbar-thumb {
-    background: #888;
-    border-radius: 10px;
-    opacity: 0.20;
-}
-
-.firstdiv {
+.container{
+    height: calc(100vh - 0.2rem);
     display: flex;
-    justify-content: center;
-    margin: auto;
-    height: fit-content;
-    flex-direction: row;
-    overflow-y: auto;
-        
+    overflow: hidden;
 }
 
-.notedivcontent {
-    /* border: 1px solid; */
-    width: calc(100vw - 26rem);
-    min-width: 25.76rem;
-    background-color: #DAE5F5;
-}
-
-.leftheading h1 {
-    margin: 0px auto;
-    text-align: center;
-}
-
-.leftheading {
-    position: sticky;
-    top: 3rem;
-    z-index: 1;
-    background-color: #fff;
-}
-
-.leftnotebutton {
-    position: sticky;
-    bottom: 10px;
-    width: max-content;
-    left: 15rem;
-}
-
-.notedivoption {
+.noteslist{
     max-width: 26rem;
     min-width: 16rem;
-    width: 100%;
     padding: 1rem 0;
+    height: calc(100vh - 2.3rem);
+    overflow: hidden;
+    width: 100%;;
 }
 
-/* .divheading {
-    margin-top: 15px;
-} */
-
-.pocektnoteheading {
-    margin: 0px;
+.pocektnoteheading{
     text-align: center;
+    margin: 1rem;
 }
 
-.divfirstouteroptionlist {
-   height: calc(100vh - 4.5rem);
-} 
-
-.disouteroptionlist {
-    height: 100%;
-    max-height: calc(100vh - 5rem);
-    min-height: 4rem;
-    padding: 0 20px;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    width: 90%;
-    top: -5rem;
+.divfirstouteroptionlist{
+    height: calc(100vh - 5.8rem);
 }
 
-.addnotebutton {
+.divChatDialogList{
+    width: calc(100vw - 26rem);
+    min-width: 25.76rem;
+    background-color: #dae5f5;
+}
+
+.addnotebutton{
     border-radius: 4rem;
     font-size: 45px;
     width: 4rem;
@@ -93,7 +40,20 @@
     float: right;
     margin-right: 1rem;
     margin-bottom: 1rem;
+    cursor: pointer;
+}
 
+.disouteroptionlist {
+    height: 100%;
+    max-height: calc(100vh - 6rem);
+    min-height: 4rem;
+    padding: 0 8px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 96%;
+    top: -5rem;
+    overflow-y: auto;
 }
 
 .divoptionlist {
@@ -120,122 +80,12 @@
     color: #FFFFFF;
 }
 
-.selectCirelceName {
-    font-size: 20px;
-}
-
 .noNotesdiv {
-    text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 9rem;
-    margin-bottom: 7.8rem;
-}
-
-/* input: */
-.divgroupform {
-    width: max-content;
-    border-radius: 10px;
-    position: sticky;
-    z-index: 100;
-    left: 38rem;
-    bottom: 17rem;
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    box-shadow: 0px 0px 2px 0.3px;
-}
-
-.imagenonotes {
-    width: -webkit-fill-available;
-    object-fit: contain;
-    height: 20rem;
-}
-
-.ptagform {
-    margin: 0px;
-    margin-right: 30px;
-    margin-left: 20px;
-}
-
-.ptagcolourchoose {
-    margin: 0px;
-    margin-right: 12px;
-    margin-left: 20px;
-}
-
-.formheading {
-    margin: auto;
-    margin-left: 20px;
-    margin-top: 10px;
-    font-size: 18px;
-}
-
-.divgroupform form {
-    display: flex;
-    flex-direction: column;
-}
-
-.buttoncreate {
-    background-color: #001F8B;
-    color: white;
-    width: 6rem;
-    height: 2rem;
-    border-radius: 8px;
-    margin: auto;
-    margin-right: 10px;
-    margin-top: 20px;
-    margin-bottom: 15px;
-}
-
-.inputcreategroup {
-    width: -webkit-fill-available;
-    height: 30px;
-    border-radius: 8px;
-    margin-right: 20px;
-}
-
-.inputcreategroup:placeholder-shown {
-    color: #001F8B;
-    font-size: 14px;
-}
-
-.inputcreategroup[type=text] {
-    padding-left: 14px;
-}
-
-.perror {
-    margin: auto;
-    font-size: 11px;
-    letter-spacing: 1px;
-    color: red;
-    margin-top: 5px;
-    margin-left: 10px;
-}
-
-.optionColorChoose {
-    display: flex;
-    /* flex-direction: column; */
-    align-items: center;
-    padding-right: 15px;
-}
-
-.colourlistoption {
-    width: 40px;
-    height: 40px;
-    border-radius: 30px;
-    margin-left: 4px;
-    margin-right: 4px;
-    cursor: pointer;
-}
-
-.notenavbar {
-    display: flex;
-    align-items: center;
-    background-color: #001F8B;
-    padding: 10px;
-    color: #fff;
+    justify-content: center;
+    height: 100%;
 }
 
 .notenavitem {
@@ -243,19 +93,32 @@
     align-items: center;
 }
 
-.notesarray {
-    overflow-y: scroll;
-    height: 27rem;
-    width: 70rem;
+.notenavbar {
+    background-color: #001F8B;
+    padding: 0.75rem;
+    color: #fff;
 }
 
-.notedivcontentarray {
-    height: calc(100vh - 13.5rem);
+.divoutercontentarray{
+    height: calc(100vh - 13.9rem);
     overflow-y: auto;
 }
 
+.notetextarea {
+    font-size: 20px;
+    border: 10px solid blue;
+    width: -webkit-fill-available;
+    height: 7.8rem;
+}
+
+.imagebutton {
+    position: absolute;
+    bottom: 1.2rem;
+    right: 1rem;
+}
+
 .contentbox {
-    max-width: calc(100vw - 50rem);
+    max-width: 50%;
     min-width: 20rem;
     width: 100%;
     margin: 16px;
@@ -266,253 +129,19 @@
     border-radius: 5px;
 }
 
-.textareadiv {
-    background-color: blue;
-    display: flex;
-    justify-content: center;
-    padding-top: 14px;
-    padding-bottom: 12px;
-    padding-left: 10px;
-    padding-right: 10px;
-}
-
-.notetextarea {
-    font-size: 20px;
-    resize: none;
-    border: 10px solid blue;
-    width: -webkit-fill-available;
-    height: 7.8rem;
-}
-
-.textareadiv textarea::placeholder {
-    font-size: 20px;
-    padding-left: 5px;
-}
-
-.imagebutton {
-    position: absolute;
-    bottom: 1.2rem;
-    right: 1rem;
-}
-
-.textBox{
-    position: relative;
-    width: 100%;
-}
 @media screen and (max-width:430px) {
-    ::-webkit-scrollbar {
-        width: 10px;
+    .noteslist{
+        min-width: 100vw;
     }
-
-    ::-webkit-scrollbar-track {
-        background: #f1f1f1;
-    }
-
-    ::-webkit-scrollbar-thumb {
-        background: #888;
-        border-radius: 10px;
-    }
-
-    /* .firstdiv {
-        display: flex;
-        justify-content: center;
-        margin: auto;
-        height: fit-content;
-        flex-direction: row;
-        width: fit-content;
-    } */
-
-    .notedivoption {
-        width: 100%;
-        height: fit-content;
-        display: block;
-    }
-
-    /* .divheading {
-        margin-top: 15px;
-    } */
-
-    /* .noNotesdiv {
+    .noNotesdiv{
         display: none;
-    } */
-
-    .notedivcontent {
-        /* width: auto; */
-        display: none;
-        min-width: calc(100vw - 10px);
-        /* display: none !important; */
     }
 
-
-    .pocektnoteheading {
-        margin: 0px;
-        text-align: center;
-        font-size: 30px;
-    }
-
-    /* .disouteroptionlist {
-        height: calc(100vh - 14rem);
-        margin-top: 10px;
-        width: 30rem;
-    } */
-
-    .divoptionlist {
-        margin-top: 15px;
-        margin-bottom: 15px;
-        font-size: 18px;
-        letter-spacing: 0px;
-        line-height: 40px;
-        margin-left: 10px;
-        align-items: center;
-    }
-
-    .divchoicecircle {
-        width: 3.2rem;
-        height: 3.2rem;
-        font-size: 17px;
-        font-weight: 600;
-        color: #f1f1f1;
-    }
-
-    .divchoicecircle1 {
-        width: 2.5rem;
-        height: 2.5rem;
-        font-size: 16px;
-        font-weight: 600;
-        color: #f1f1f1;
-    }
-
-    .selectCirelceName {
-        font-size: 16px;
-    }
-
-    /* .addnotebutton {
-        margin-right: auto;
-        border-radius: 50%;
-        font-size: 39px;
-        width: 4rem;
-        height: 4rem;
-        background-color: #16008B;
-        color: white;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        float: right;
-        margin-right: 15px;
-    } */
-
-    .divgroupform {
-        width: 24rem;
-        position: sticky;
-        margin-top: auto;
-        margin-left: auto;
-        margin-right: 25px;
-        bottom: 50vh;
-    }
-
-    .formheading {
-        font-size: 17px;
-    }
-
-    .ptagform {
-        width: 8.2rem;
-        font-size: 12px;
-        margin-right: 0px;
-    }
-
-    .inputcreategroup {
-        height: 25px;
-        font-size: 12px;
-        width: fit-content;
-    }
-
-    .inputcreategroup:placeholder-shown {
-        font-size: 12px;
-    }
-
-    .perror {
-        font-size: 9px;
-        letter-spacing: 0.7px;
-        margin-left: 0px;
-    }
-
-    .colourlistoption {
-        height: 20px;
-        width: 20px;
-    }
-
-    .ptagcolourchoose {
-        font-size: 12px;
-        width: 6rem;
-        margin-right: 25px;
-    }
-
-
-    .noteareadiv {
-        display: flex;
-        flex-direction: column;
-        /* width: 3; */
-    }
-
-    .arrowimage {
-        width: 20px;
-    }
-
-    .notenavbar {
-        padding-left: 20px;
-        /* padding-top: 20px; */
-    }
-    .divoutercontentarray{
-        height: calc(100vh - 5rem);
-    }
-    .notedivcontentarray {
-        overflow-y: scroll;
-        /* height: 37.5rem; */
-        height: calc(100vh - 14.5rem);
-    }
-
-    .valueNotes {
-        font-size: 12px;
-    }
-
-    .notesarray {
-        overflow-y: scroll;
-        height: 27rem;
-        width: 30rem;
+    .textBox{
+        width: 100vw;
     }
 
     .contentbox {
-        font-size: 10px;
-        line-height: 20px;
-        margin-left: 40px;
-        min-width: 15rem;
-    }
-
-    /* .imagebutton {
-        width: 23px;
-        pointer-events: auto;
-        left: -3rem;
-        bottom:1.5rem;
-
-    } */
-
-    .textareadiv {
-        padding-top: 7px;
-        padding-bottom: 7px;
-        /* position: relative; */
-        width: 27em;
-        margin-left: 27px;
-    }
-
-    /* .notetextarea {
-        width: calc(100vw - 35rem);
-        border: 15px solid blue;
-        margin-left: 1rem;
-        height: 7.6rem;
-        font-size: 14px;
-        border-radius: 5px;
-    } */
-
-    .textareadiv textarea::placeholder {
-        font-size: 12px;
-        padding-left: 5px;
+        min-width: 14rem;
     }
 }

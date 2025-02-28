@@ -42,7 +42,6 @@ function Page1() {
         }
     }
     const handleMobileviewclose = () => {
-        console.log("Function Handle Mobile View Close")
         const element = document.getElementById('leftnotediv')
         const element2 = document.getElementById('rightnotediv')
         if (element.style.display === 'none') {
@@ -105,12 +104,11 @@ function Page1() {
     // localStorage.clear()
     return (
         <>
-            <div className='firstdiv'>
-                <div className='notedivoption' id='leftnotediv'>
+            <div className='container'>
+                <div className='noteslist' id='leftnotediv'>
                     <div className='divheading'>
                         <h1 className='pocektnoteheading' >Pocket Note</h1>
                     </div>
-                    <br />
                     <div className='divfirstouteroptionlist'>
                         <button className='addnotebutton ' onClick={() => setMyShowForm(true)}>+</button>
                         <div className='disouteroptionlist'>
@@ -131,7 +129,9 @@ function Page1() {
                         </div>
                     </div>
                 </div>
-                <div className='notedivcontent' id='rightnotediv'>
+
+                
+                <div className='divChatDialogList' id='rightnotediv'>
                     {OpenNotes === undefined ? <div className='noNotesdiv'>
                         <img src={image1} alt="nonotes" className='imagenonotes' />
                         <div>
@@ -139,7 +139,7 @@ function Page1() {
                             <p>Send and receive messages without keeping your phone online. <br />
                                 Use Pocket Notes on up to 4 linked devices and 1 mobile phone</p>
                         </div>
-                    </div> : <div className='noteareadiv'>
+                    </div> : <div>
                         <div className="notenavbar">
                             <div className='notenavitem'>
                                 <img src={arrowbutton} alt="<--" onClick={handleMobileviewclose} />
@@ -151,7 +151,7 @@ function Page1() {
                         </div>
                         <div className='divoutercontentarray'>
                             {mynotes.map((element, index) => (
-                                <div key={index} className='notedivcontentarray'>
+                                <div key={index}>
                                     {element.name === OpenNotes.name && element.notes.map((value, index) => (
                                         <div className='contentbox' key={index}>
                                             <div style={{ textAlign: "justify", lineHeight: '24px' }} className='valueNotes'>{value.note}</div>
@@ -161,11 +161,11 @@ function Page1() {
                                     }
                                 </div>
                             ))}
-                            <div className='textBox'>
+                        </div>
+                        <div className='textBox'>
                                 <textarea name="note" id="inputnotes" cols={130} rows={7} value={NotesDetails.note} onChange={handlechange} placeholder='Here’s the sample text for sample work' className='notetextarea'></textarea>
                                 <img src={sendbutton} alt="send button" className='imagebutton' onClick={handleupdatetime} />
                             </div>
-                        </div>
                     </div>
                     }
                 </div>
