@@ -151,7 +151,7 @@ function Page1() {
                         </div>
                         <div className='divoutercontentarray'>
                             {mynotes.map((element, index) => (
-                                <div key={index}>
+                                <div className='divinnercontentarray' key={index}>
                                     {element.name === OpenNotes.name && element.notes.map((value, index) => (
                                         <div className='contentbox' key={index}>
                                             <div style={{ textAlign: "justify", lineHeight: '24px' }} className='valueNotes'>{value.note}</div>

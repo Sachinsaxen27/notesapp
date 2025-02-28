@@ -103,10 +103,13 @@
 
 .divoutercontentarray {
     height: calc(100vh - 14.1rem);
-    overflow-y: auto;
+    /* overflow-y: auto; */
     border: 1px solid red;
 }
-
+.divinnercontentarray{
+    height: calc(100vh - 14rem);
+    overflow-y: auto;
+}
 .notetextarea {
     font-size: 20px;
     border: 10px solid blue;
@@ -254,5 +257,8 @@
     }
     .perror {
         font-size: 9px;
+    }
+    .addnotebutton{
+        bottom: 25px;
     }
 }
