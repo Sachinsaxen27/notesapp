@@ -244,9 +244,11 @@
     height: 27rem;
     width: 70rem;
 }
-
-.notedivcontentarray {
+.divoutercontentarray{
     height: 32rem;
+}
+.notedivcontentarray {
+    height: 30rem;
     overflow-y: scroll;
 }
 
@@ -287,7 +289,7 @@
     position: relative;
     cursor: pointer;
     height: fit-content;
-    bottom: 5.6rem;
+    bottom: 60px;
     margin-right: auto;
     left: 66rem;
 }
@@ -459,12 +461,12 @@
         padding-top: 20px;
     }
     .divoutercontentarray{
-        height: calc(100vh-15rem);
+        height: calc(100vh - 5rem);
     }
     .notedivcontentarray {
         overflow-y: scroll;
         /* height: 37.5rem; */
-        height: calc(100vh - 13rem);
+        height: calc(100vh - 15rem);
     }
 
     .valueNotes {
@@ -487,8 +489,8 @@
     .imagebutton {
         width: 23px;
         pointer-events: auto;
-        left: 25rem;
-        bottom:5.5rem;
+        left: -3rem;
+        bottom:1.5rem;
 
     }
 

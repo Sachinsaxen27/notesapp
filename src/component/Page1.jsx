@@ -161,11 +161,9 @@ function Page1() {
                                     }
                                 </div>
                             ))}
-                        </div>
-                        <div style={{ position: 'relative', bottom:'33px'}}>
                             <textarea name="note" id="inputnotes" cols={130} rows={7} value={NotesDetails.note} onChange={handlechange} placeholder='Here’s the sample text for sample work' className='notetextarea'></textarea>
+                            <img src={sendbutton} alt="send button" className='imagebutton' onClick={handleupdatetime} />
                         </div>
-                        <img src={sendbutton} alt="send button" className='imagebutton' onClick={handleupdatetime} />
                     </div>
                     }
                 </div>
