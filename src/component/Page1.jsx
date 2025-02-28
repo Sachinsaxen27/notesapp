@@ -135,7 +135,7 @@ function Page1() {
                     {OpenNotes === undefined ? <div className='noNotesdiv'>
                         <img src={image1} alt="nonotes" className='imagenonotes' />
                         <div>
-                            <h1 style={{ margin: '0px' }}>Pocket Notes</h1>
+                            <h1 style={{ margin: '0px', textAlign:'center'}}>Pocket Notes</h1>
                             <p>Send and receive messages without keeping your phone online. <br />
                                 Use Pocket Notes on up to 4 linked devices and 1 mobile phone</p>
                         </div>
