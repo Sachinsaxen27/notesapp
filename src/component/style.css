@@ -248,8 +248,8 @@
     height: 32rem;
 }
 .notedivcontentarray {
-    height: 30rem;
-    overflow-y: scroll;
+    height: calc(100vh - 13.5rem);
+    overflow-y: auto;
 }
 
 .contentbox {
