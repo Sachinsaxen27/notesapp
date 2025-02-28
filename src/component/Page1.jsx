@@ -112,6 +112,7 @@ function Page1() {
                     </div>
                     <br />
                     <div className='divfirstouteroptionlist'>
+                        <button className='addnotebutton ' onClick={() => setMyShowForm(true)}>+</button>
                         <div className='disouteroptionlist'>
                             {notelist ? notelist.map((value, index) => {
                                 const [firstName, lastName] = value.name.split(" ");
@@ -128,7 +129,6 @@ function Page1() {
                             </div>
                             }
                         </div>
-                        <button className='addnotebutton ' onClick={() => setMyShowForm(true)}>+</button>
                     </div>
                 </div>
                 <div className='notedivcontent' id='rightnotediv'>
