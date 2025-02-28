@@ -458,11 +458,13 @@
         padding-left: 50px;
         padding-top: 20px;
     }
-
+    .divoutercontentarray{
+        height: calc(100vh-15rem);
+    }
     .notedivcontentarray {
         overflow-y: scroll;
         /* height: 37.5rem; */
-        height: calc(100vh - 15rem);
+        height: calc(100vh - 13rem);
     }
 
     .valueNotes {

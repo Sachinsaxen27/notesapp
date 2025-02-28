@@ -149,6 +149,7 @@ function Page1() {
                                 </div>
                             </div>
                         </div>
+                        <div className='divoutercontentarray'>
                             {mynotes.map((element, index) => (
                                 <div key={index} className='notedivcontentarray'>
                                     {element.name === OpenNotes.name && element.notes.map((value, index) => (
@@ -160,6 +161,7 @@ function Page1() {
                                     }
                                 </div>
                             ))}
+                        </div>
                         <div style={{ position: 'relative', bottom:'33px'}}>
                             <textarea name="note" id="inputnotes" cols={130} rows={7} value={NotesDetails.note} onChange={handlechange} placeholder='Here’s the sample text for sample work' className='notetextarea'></textarea>
                         </div>
