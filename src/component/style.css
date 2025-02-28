@@ -102,8 +102,7 @@
 }
 
 .divoutercontentarray {
-    margin-bottom: 15px;
-    height: calc(100vh - 17rem);
+    height: calc(100vh - 14rem);
     overflow-y: auto;
     /* border: 1px solid red; */
 }
@@ -116,6 +115,7 @@
     border: 10px solid blue;
     width: -webkit-fill-available;
     height: 7.8rem;
+    resize: none;
 }
 
 .imagebutton {
@@ -261,5 +261,8 @@
     }
     .addnotebutton{
         bottom: 25px;
+    }
+    .divoutercontentarray {
+        height: calc(100vh - 17rem);
     }
 }
