@@ -38,7 +38,7 @@
     background-color: #16008B;
     position: sticky;
     /* top: 100%; */
-    bottom: 40px;
+    bottom: 50px;
     float: right;
     margin-right: 1rem;
     margin-bottom: 4rem;
@@ -103,7 +103,7 @@
 
 .divoutercontentarray {
     margin-bottom: 15px;
-    height: calc(100vh - 16rem);
+    height: calc(100vh - 17rem);
     overflow-y: auto;
     /* border: 1px solid red; */
 }
