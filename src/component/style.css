@@ -102,8 +102,8 @@
 }
 
 .divoutercontentarray {
-    margin-bottom: 10px;
-    height: calc(100vh - 14.9rem);
+    margin-bottom: 15px;
+    height: calc(100vh - 15.5rem);
     overflow-y: auto;
     /* border: 1px solid red; */
 }
