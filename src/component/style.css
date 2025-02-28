@@ -102,6 +102,7 @@
 .divoutercontentarray{
     height: calc(100vh - 13.9rem);
     overflow-y: auto;
+    border: 1px solid red;
 }
 
 .notetextarea {
@@ -139,6 +140,12 @@
 
     .textBox{
         width: 100vw;
+        position: absolute;
+        bottom: 0px;
+    }
+
+    .divChatDialogList{
+        min-width: 100vw;
     }
 
     .contentbox {
