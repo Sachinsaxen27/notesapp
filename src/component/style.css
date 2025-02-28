@@ -26,7 +26,7 @@
 .notedivcontent {
     /* border: 1px solid; */
     max-width: 55rem;
-    min-width: 45rem;
+    min-width: 30rem;
     width: 100%;
     background-color: #DAE5F5;
 }
@@ -52,7 +52,7 @@
 
 .notedivoption {
     max-width: 30rem;
-    min-width: 26rem;
+    min-width: 16rem;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -76,6 +76,7 @@
     height: calc(100vh - 6rem);
     max-height: 45rem;
     min-height: 4rem;
+    padding: 0 20px;
 }
 
 .addnotebutton {
@@ -95,13 +96,12 @@
 
 .divoptionlist {
     display: flex;
-    margin-top: 20px;
     margin-bottom: 20px;
     font-size: 20px;
     letter-spacing: 1px;
     line-height: 51px;
-    margin-left: 30px;
     cursor: pointer;
+    width: max-content;
 }
 
 .divchoicecircle {
@@ -276,7 +276,7 @@
     font-size: 20px;
     resize: none;
     border: 10px solid blue;
-    width: 98%;
+    width: -webkit-fill-available;
     height: 7.8rem;
 }
 
@@ -286,15 +286,15 @@
 }
 
 .imagebutton {
-    object-fit: contain;
-    position: relative;
-    cursor: pointer;
-    height: fit-content;
-    bottom: 60px;
-    margin-right: auto;
-    left: 66rem;
+    position: absolute;
+    bottom: 1.2rem;
+    right: 1rem;
 }
 
+.textBox{
+    position: relative;
+    width: 100%;
+}
 @media screen and (max-width:430px) {
     ::-webkit-scrollbar {
         width: 10px;
@@ -483,13 +483,13 @@
         margin-left: 40px;
     }
 
-    .imagebutton {
+    /* .imagebutton {
         width: 23px;
         pointer-events: auto;
         left: -3rem;
         bottom:1.5rem;
 
-    }
+    } */
 
     .textareadiv {
         padding-top: 7px;
