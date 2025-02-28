@@ -102,14 +102,15 @@
 }
 
 .divoutercontentarray {
-    height: calc(100vh - 14.1rem);
-    /* overflow-y: auto; */
-    border: 1px solid red;
+    margin-bottom: 10px;
+    height: calc(100vh - 14.9rem);
+    overflow-y: auto;
+    /* border: 1px solid red; */
 }
-.divinnercontentarray{
+/* .divinnercontentarray{
     height: calc(100vh - 14rem);
     overflow-y: auto;
-}
+} */
 .notetextarea {
     font-size: 20px;
     border: 10px solid blue;
